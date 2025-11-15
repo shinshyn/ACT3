@@ -3,11 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Act3</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body></body>
+  <body class="p-8 bg-white-800 text-black">
+    <header class="flex justify-between mb-8"></header>
+    <main class="space-y-8 pb-52">
+      <div class="flex gap-4">
+        <button id="button1-1" class="bg-blue-200 py-2 px-4 rounded">
+          log by id using getElementById
+        </button>
+        <button id="button1-2" class="bg-blue-300 py-2 px-4 rounded">
+          log by id using querySelector
+        </button>
+        <button class="button2 bg-blue-400 py-2 px-4 rounded">
+          log by class
+        </button>
+        <span class="py-2 px-4 rounded">log by element</span>
+        <button id="button3" class="bg-blue-500 py-2 px-4 rounded">
+          log title
+        </button>
+      </div>
+      <hr />
+
+      <div class="flex gap-4">
+        <div>
+          <button id="prop-1" class="bg-gray-300 py-2 px-4 rounded w-16">
+            off
+          </button>
+        </div>
+        <div>
+          <button id="prop-2" class="bg-green-300 py-2 px-4 rounded">
+            Show Students
+          </button>
+          <div id="student-list" class="mt-4"></div>
+        </div>
+        <div class="flex flex-col gap-4 items">
+          <input
+            id="prop-3"
+            type="text"
+            class="p-2 rounded text-black"
+            placeholder="Type something"
+          />
+          <button
+            class="bg-green-400 py-2 px-4 rounded w-24"
+            onclick="alert(document.getElementById('prop-3').value)"
+          >
+            submit
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+
   <script>
     let name = "Sheyn"; //mutable (changeable)
 
@@ -72,77 +121,77 @@
       }
     }
 
-    // {
-    //   document
-    //     .getElementById("button1-1")
-    //     .addEventListener("click", () =>
-    //       console.log(
-    //         "button `log by id using getElementById` has been clicked"
-    //       )
-    //     );
+    {
+      document
+        .getElementById("button1-1")
+        .addEventListener("click", () =>
+          console.log(
+            "button `log by id using getElementById` has been clicked"
+          )
+        );
 
-    //   document
-    //     .querySelector("#button1-2")
-    //     .addEventListener("click", () =>
-    //       console.log("button `log by id using querySelector` has been clicked")
-    //     );
+      document
+        .querySelector("#button1-2")
+        .addEventListener("click", () =>
+          console.log("button `log by id using querySelector` has been clicked")
+        );
 
-    //   document
-    //     .querySelector(".button2")
-    //     .addEventListener("click", () =>
-    //       console.log("button `log by class` has been clicked")
-    //     );
+      document
+        .querySelector(".button2")
+        .addEventListener("click", () =>
+          console.log("button `log by class` has been clicked")
+        );
 
-    //   document
-    //     .querySelector("span")
-    //     .addEventListener("click", () =>
-    //       console.log("button `log by element` has been clicked")
-    //     );
+      document
+        .querySelector("span")
+        .addEventListener("click", () =>
+          console.log("button `log by element` has been clicked")
+        );
 
-    //   document
-    //     .getElementById("button3")
-    //     .addEventListener("click", () =>
-    //       console.log(document.getElementById("title").innerText)
-    //     );
-    // }
-    // {
-    //   document.getElementById("prop-1").addEventListener("click", () => {
-    //     const prop1 = document.getElementById("prop-1");
-    //     if (prop1.innerText == "off") {
-    //       prop1.innerText = "on";
-    //       prop1.classList.add("bg-green-500");
-    //       prop1.classList.remove("bg-gray-500");
-    //     } else {
-    //       prop1.innerText = "off";
-    //       prop1.classList.add("bg-gray-500");
-    //       prop1.classList.remove("bg-green-500");
-    //     }
-    //   });
+      document
+        .getElementById("button3")
+        .addEventListener("click", () =>
+          console.log(document.getElementById("title").innerText)
+        );
+    }
+    {
+      document.getElementById("prop-1").addEventListener("click", () => {
+        const prop1 = document.getElementById("prop-1");
+        if (prop1.innerText == "off") {
+          prop1.innerText = "on";
+          prop1.classList.add("bg-green-500");
+          prop1.classList.remove("bg-gray-500");
+        } else {
+          prop1.innerText = "off";
+          prop1.classList.add("bg-gray-500");
+          prop1.classList.remove("bg-green-500");
+        }
+      });
 
-    //   document.getElementById("prop-2").addEventListener("click", () => {
-    //     const prop2 = document.getElementById("prop-2");
-    //     if (prop2.innerText == "Show Students") {
-    //       prop2.innerText = "Hide Students";
-    //       showStudents();
-    //     } else {
-    //       prop2.innerText = "Show Students";
-    //       const studentList = document.getElementById("student-list");
-    //       studentList.innerHTML = "";
-    //     }
-    //   });
+      document.getElementById("prop-2").addEventListener("click", () => {
+        const prop2 = document.getElementById("prop-2");
+        if (prop2.innerText == "Show Students") {
+          prop2.innerText = "Hide Students";
+          showStudents();
+        } else {
+          prop2.innerText = "Show Students";
+          const studentList = document.getElementById("student-list");
+          studentList.innerHTML = "";
+        }
+      });
 
-    //   const showStudents = () => {
-    //     const studentList = document.getElementById("student-list");
-    //     const ul = document.createElement("ul");
-    //     ul.classList.add("list-disc", "list-inside");
-    //     const students = ["Alf", "Gab", "Neza", "Nica", "Jan"];
-    //     students.forEach((student) => {
-    //       const li = document.createElement("li");
-    //       li.innerText = student;
-    //       ul.appendChild(li);
-    //     });
-    //     studentList.appendChild(ul);
-    //   };
-    // }
+      const showStudents = () => {
+        const studentList = document.getElementById("student-list");
+        const ul = document.createElement("ul");
+        ul.classList.add("list-disc", "list-inside");
+        const students = ["Alf", "Gab", "Neza", "Nica", "Jan"];
+        students.forEach((student) => {
+          const li = document.createElement("li");
+          li.innerText = student;
+          ul.appendChild(li);
+        });
+        studentList.appendChild(ul);
+      };
+    }
   </script>
 </html>
