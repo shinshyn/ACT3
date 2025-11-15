@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body></body>
+  <script>
+    let name = "Sheyn"; //mutable (changeable)
+
+    const age = 19; //immutable (unchangeable)
+
+    const gwapo = true; //boolean
+    const attributes = ["wise", "good-looking", "humble"]; // array
+    const details = {
+      id: "22101823",
+      year: 2025,
+      school: "USC",
+      //specific call
+
+      // >details.year
+      //>details.school
+    };
+
+    //function
+    function greet() {
+      console.log(`Hello! my name is ${name}. I am ${age} years old.`);
+    }
+
+    // w/ parameters
+    function reply(recipient) {
+      console.log(`Nice meeting you, ${recipient}!`); // para mo gana, inig adto sa console kay mo input ug string. ex. reply('Alf')
+    }
+
+    // w/ conditions
+    function negotiate(price) {
+      if (price < 100) {
+        console.log("Geh, nays2x!");
+      } else {
+        console.log("Luh siya grabe nmn ng inflation!...");
+      }
+    }
+
+    function buyFruit(fruit) {
+      //switch
+      // switch(fruit) {
+      //  case 'mango':
+      //     console.log(100)
+      //     break;
+      // case 'strawbs':
+      //     console.log(100)
+      //     break;
+      // default:
+      //     console.log(200)
+      //condition
+      if ((fruit = "mango")) {
+        console.log(100);
+      } else if ((fruit = "strawbs")) {
+        console.log(200);
+      } else {
+        console.log(300);
+      }
+    }
+
+    //w/ loops
+    function introduce() {
+      for (let i = 0; i < attributes.length; i++) {
+        console.log(`I am ${attributes[i]}`);
+      }
+    }
+
+    // {
+    //   document
+    //     .getElementById("button1-1")
+    //     .addEventListener("click", () =>
+    //       console.log(
+    //         "button `log by id using getElementById` has been clicked"
+    //       )
+    //     );
+
+    //   document
+    //     .querySelector("#button1-2")
+    //     .addEventListener("click", () =>
+    //       console.log("button `log by id using querySelector` has been clicked")
+    //     );
+
+    //   document
+    //     .querySelector(".button2")
+    //     .addEventListener("click", () =>
+    //       console.log("button `log by class` has been clicked")
+    //     );
+
+    //   document
+    //     .querySelector("span")
+    //     .addEventListener("click", () =>
+    //       console.log("button `log by element` has been clicked")
+    //     );
+
+    //   document
+    //     .getElementById("button3")
+    //     .addEventListener("click", () =>
+    //       console.log(document.getElementById("title").innerText)
+    //     );
+    // }
+    // {
+    //   document.getElementById("prop-1").addEventListener("click", () => {
+    //     const prop1 = document.getElementById("prop-1");
+    //     if (prop1.innerText == "off") {
+    //       prop1.innerText = "on";
+    //       prop1.classList.add("bg-green-500");
+    //       prop1.classList.remove("bg-gray-500");
+    //     } else {
+    //       prop1.innerText = "off";
+    //       prop1.classList.add("bg-gray-500");
+    //       prop1.classList.remove("bg-green-500");
+    //     }
+    //   });
+
+    //   document.getElementById("prop-2").addEventListener("click", () => {
+    //     const prop2 = document.getElementById("prop-2");
+    //     if (prop2.innerText == "Show Students") {
+    //       prop2.innerText = "Hide Students";
+    //       showStudents();
+    //     } else {
+    //       prop2.innerText = "Show Students";
+    //       const studentList = document.getElementById("student-list");
+    //       studentList.innerHTML = "";
+    //     }
+    //   });
+
+    //   const showStudents = () => {
+    //     const studentList = document.getElementById("student-list");
+    //     const ul = document.createElement("ul");
+    //     ul.classList.add("list-disc", "list-inside");
+    //     const students = ["Alf", "Gab", "Neza", "Nica", "Jan"];
+    //     students.forEach((student) => {
+    //       const li = document.createElement("li");
+    //       li.innerText = student;
+    //       ul.appendChild(li);
+    //     });
+    //     studentList.appendChild(ul);
+    //   };
+    // }
+  </script>
+</html>
